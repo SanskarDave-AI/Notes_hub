@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Notes</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Notes Hub</h2>
+
+        <ul>
+            <li onclick="go('dashboard.html')">Dashboard</li>
+            <li class="active">Upload</li>
+            <li onclick="go('browse.html')">Browse</li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <div class="upload-card">
+            <h1>Upload Notes</h1>
+            <p>Share your notes with others</p>
+
+            <input type="text" id="title" placeholder="Enter Note Title">
+            <input type="text" id="subject" placeholder="Enter Subject">
+
+            <select id="sem">
+                <option value="">Select Semester</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+            </select>
+
+            <textarea id="desc" placeholder="Enter Description"></textarea>
+
+            <input type="file" id="file">
+
+            <button onclick="uploadNote()">Upload</button>
+
+            <p id="msg"></p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="upload.js"></script>
+</body>
+</html>

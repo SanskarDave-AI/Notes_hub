@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #f5f7fb, #eef1ff);
+    overflow: hidden;
+}
+
+
+.container {
+    display: flex;
+    height: 100vh;
+    padding: 40px;
+}
+
+
+.left {
+    flex: 1;
+    padding: 60px;
+    position: relative;
+}
+
+
+.left h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+.left span {
+    color: #5a67ff;
+}
+
+
+.left p {
+    margin-top: 15px;
+    color: #561a87;
+    font-size: 16px;
+    max-width: 450px;
+}
+
+
+.left img {
+    width: 420px;
+    margin-top: 40px;
+}
+
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    width: 380px;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+
+.card h2 {
+    font-size: 22px;
+}
+
+
+.subtext {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+
+.password-box {
+    position: relative;
+}
+
+.password-box i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+}
+
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    background: linear-gradient(to right, #5a67ff, #6a75ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+.switch {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.switch a {
+    color: #5a67ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 8px;
+}

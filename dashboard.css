@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f6ff;
+}
+
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #5a67ff;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.sidebar ul li:hover,
+.sidebar ul .active {
+    background: rgba(255,255,255,0.2);
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* WELCOME */
+.welcome h1 {
+    font-size: 28px;
+}
+
+.welcome p {
+    color: gray;
+    margin-top: 5px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.stat-card h2 {
+    color: #5a67ff;
+    font-size: 26px;
+}
+
+/* ACTIONS */
+.actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.action-card {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-card i {
+    font-size: 30px;
+    color: #5a67ff;
+    margin-bottom: 10px;
+}
+
+.action-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* RECENT */
+.recent {
+    margin-top: 35px;
+}
+
+.recent h2 {
+    margin-bottom: 15px;
+}
+
+.note {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.note button {
+    background: #5a67ff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}

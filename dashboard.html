@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard- IIIT Raichur Notes Hub</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2><i class="fa-solid fa-book"></i>Notes Hub</h2>
+            <ul>
+                <li class="active"><i class="fa-solid fa-house"></i>Dashboard</li>
+                <li onclick="goBrowse()"><i class="fa-solid fa-folder-open"></i>Browse Notes</li>
+                <li onclick="goUpload()"><i class="fa-solid fa-upload"></i>Upload Notes</li>
+                <li onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</li>
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <div class="Welcome">
+                <h1>Welcome Back</h1>
+                 <p>Ready to learn and share today?</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h2 id="notesCount">0</h2>
+                    <p>Notes Uploaded</p>
+                </div>
+                 <div class="stat-card">
+                    <h2 id="downloadCount">0</h2>
+                    <p>Total Downloads</p>
+                 </div>
+            </div>
+            <div class="actions">
+                <div class="action-card" onclick="goUpload()">
+                    <i class="fa-solid fa-upload"></i>
+                    <h3>Upload Notes</h3>
+                    <p>Share your notes with the others.</p>
+                </div>
+                <div class="action-card" onclick="goBrowse()">
+                     <i class="fa-solid fa-book-open"></i>
+                     <h3>Browse Notes</h3>
+                     <p>Explore and download notes from others.</p>
+
+                </div>
+            </div>
+            <div class="recent">
+                <h2>Recent Notes</h2>
+                <p>No notes uploaded yet.</p>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

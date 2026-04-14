@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browse Notes</title>
+    <link rel="stylesheet" href="browse.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Notes Hub</h2>
+
+        <ul>
+            <li onclick="go('dashboard.html')">Dashboard</li>
+            <li onclick="go('upload.html')">Upload</li>
+            <li class="active">Browse</li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <h1>Browse Notes</h1>
+        <p class="subtitle">Explore notes shared by students</p>
+
+        <!-- SEARCH -->
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search notes..."
+            onkeyup="searchNotes()"
+            class="search-box"
+        >
+
+        <!-- NOTES -->
+        <div class="notes" id="notesContainer"></div>
+
+    </div>
+
+</div>
+
+<script src="browse.js"></script>
+</body>
+</html>

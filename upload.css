@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: white;
+    padding: 25px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    color: #1e2a78;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.sidebar li:hover {
+    background: #eef1ff;
+}
+
+.sidebar .active {
+    background: #5a67ff;
+    color: white;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #eef1ff, #f5f7fb);
+}
+
+/* CARD */
+.upload-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    width: 380px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* TITLE */
+.upload-card h1 {
+    font-size: 26px;
+    color: #1e2a78;
+    margin-bottom: 8px;
+}
+
+.upload-card p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+.upload-card input,
+.upload-card select,
+.upload-card textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.upload-card textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* BUTTON */
+.upload-card button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #5a67ff, #7c83ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-card button:hover {
+    transform: scale(1.03);
+}
+
+/* MESSAGE */
+#msg {
+    margin-top: 10px;
+    font-size: 13px;
+    color: green;
+}
