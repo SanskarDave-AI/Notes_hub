@@ -121,6 +121,19 @@ button:hover {
     opacity: 0.9;
 }
 
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #5a67ff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.back-home i {
+    font-size: 14px;
+}
 
 .switch {
     margin-top: 20px;

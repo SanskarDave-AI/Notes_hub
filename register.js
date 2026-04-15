@@ -2,6 +2,8 @@
 const togglePassword = document.getElementById("togglePassword");
 const password = document.getElementById("password");
 
+const isIIITEmail = (email) => /^[^\s@]+@iiitr\.ac\.in$/i.test(email);
+
 togglePassword.addEventListener("click", () => {
     if (password.type === "password") {
         password.type = "text";
@@ -38,6 +40,11 @@ async function register() {
 
     if (username === "" || email === "" || pass === "" || confirm === "") {
         error.innerText = "Please fill all fields";
+        return;
+    }
+
+    if (!isIIITEmail(email)) {
+        error.innerText = "Only iiitr.ac.in emails are allowed";
         return;
     }
 
@@ -95,6 +102,11 @@ async function register() {
     } catch (error) {
         // Fallback: Store user locally if server is not running
         console.log("Server not available, using localStorage fallback");
+
+        if (!isIIITEmail(email)) {
+            error.innerText = "Only iiitr.ac.in emails are allowed";
+            return;
+        }
 
         let users = JSON.parse(localStorage.getItem("users")) || [];
 

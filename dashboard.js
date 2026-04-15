@@ -17,8 +17,8 @@ async function loadDashboard() {
 
         if (response.ok) {
             const data = await response.json();
-            document.getElementById("notesCount").innerText = data.files.length;
-            document.getElementById("downloadCount").innerText = 0;
+            document.getElementById("notesCount").innerText = data.totalUploads || data.files.length;
+            document.getElementById("downloadCount").innerText = data.totalDownloads || 0;
             displayRecentNotes(data.files.slice(0, 5));
             return;
         }
@@ -32,11 +32,12 @@ async function loadDashboard() {
         }
 
         let notes = JSON.parse(localStorage.getItem("notes")) || [];
-        const userNotes = notes.filter(note => note.userId === currentUser.id);
+        const totalUploads = notes.length;
+        const totalDownloads = notes.reduce((sum, note) => sum + (note.downloads || 0), 0);
 
-        document.getElementById("notesCount").innerText = userNotes.length;
-        document.getElementById("downloadCount").innerText = 0;
-        displayRecentNotes(userNotes.slice(0, 5));
+        document.getElementById("notesCount").innerText = totalUploads;
+        document.getElementById("downloadCount").innerText = totalDownloads;
+        displayRecentNotes(notes.slice(0, 5));
     }
 }
 
@@ -55,7 +56,7 @@ function displayRecentNotes(notes) {
         div.classList.add("note");
 
         div.innerHTML = `
-            <span>${note.title || note.originalname}</span>
+            <span>${note.title || note.originalname} (${note.downloads || 0} downloads)</span>
             <button onclick="downloadNote('${note._id}')">Download</button>
         `;
 
@@ -109,7 +110,7 @@ function goBrowse() {
 async function logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 // Load dashboard on page load

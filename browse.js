@@ -46,7 +46,7 @@ function displayNotes(notes) {
             <h3>${note.title || note.originalname}</h3>
             <p><strong>Subject:</strong> ${note.subject || 'N/A'} • <strong>Semester:</strong> ${note.semester || 'N/A'}</p>
             <p><strong>Description:</strong> ${note.description || 'No description'}</p>
-            <p><strong>Uploaded by:</strong> ${note.uploadedBy}</p>
+            <p><strong>Uploaded by:</strong> ${note.uploadedBy} • <strong>Downloads:</strong> ${note.downloads || 0}</p>
             <button onclick="downloadNote('${note._id}')">Download</button>
         `;
 
